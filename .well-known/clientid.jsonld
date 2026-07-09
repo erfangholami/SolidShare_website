@@ -2,7 +2,7 @@
   "@context": ["https://www.w3.org/ns/solid/oidc-context.jsonld"],
   "client_id": "https://solidshare.app/.well-known/clientid.jsonld",
   "client_name": "Solid Share",
-  "redirect_uris": ["com.erfangholami.solidshare:/oauth2redirect"],
+  "redirect_uris": ["https://solidshare.app/oauth2redirect"],
   "client_uri": "https://solidshare.app/",
   "logo_uri": "https://solidshare.app/public/icon.png",
   "scope": "openid webid offline_access",
