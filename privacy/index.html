@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Solid Share</title>
+    <meta
+      name="description"
+      content="Privacy Policy for the Solid Share Android app: what data it handles, which permissions it uses and why, who receives data, and how to delete it."
+    />
+    <meta name="theme-color" content="#0F1118" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Privacy Policy — Solid Share" />
+    <meta
+      property="og:description"
+      content="What the Solid Share Android app does with your data, which permissions it uses and why, and how to delete everything."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/public/icon.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/public/icon.svg" />
+
+    <style>
+      :root {
+        --bg: #0f1118;
+        --surface: #161926;
+        --surface-2: #1c2030;
+        --border: #262b3d;
+        --text: #f5f6fa;
+        --muted: #9aa0b4;
+        --accent: #4d65ff;
+        --accent-soft: rgba(77, 101, 255, 0.14);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 1.5rem;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+        font-size: 1rem;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .page {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 2.5rem 1.25rem 4rem;
+      }
+
+      .masthead {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .masthead img {
+        width: 36px;
+        height: auto;
+      }
+
+      .masthead a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 5vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.925rem;
+      }
+
+      .meta strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: clamp(1.3rem, 3.5vw, 1.55rem);
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        line-height: 1.25;
+        margin: 3rem 0 0.85rem;
+        scroll-margin-top: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.075rem;
+        font-weight: 600;
+        margin: 1.85rem 0 0.55rem;
+        letter-spacing: -0.01em;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 1rem 1.25rem;
+      }
+
+      li {
+        margin-bottom: 0.45rem;
+      }
+
+      li > ul,
+      li > ol {
+        margin-top: 0.45rem;
+      }
+
+      a {
+        color: #8f9dff;
+        text-underline-offset: 0.18em;
+        text-decoration-thickness: 1px;
+      }
+
+      a:hover {
+        color: var(--text);
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.875em;
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.08em 0.35em;
+        word-break: break-word;
+      }
+
+      .lede {
+        font-size: 1.075rem;
+        color: #dfe2ee;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.25rem 1.4rem;
+        margin: 2rem 0;
+      }
+
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.15rem;
+      }
+
+      .card ul {
+        margin-bottom: 0;
+      }
+
+      .card.accent {
+        border-color: rgba(77, 101, 255, 0.45);
+        background: var(--accent-soft);
+      }
+
+      nav.toc ol {
+        list-style: none;
+        margin: 0;
+        columns: 2;
+        column-gap: 2rem;
+      }
+
+      nav.toc li {
+        margin-bottom: 0.4rem;
+        break-inside: avoid;
+        font-size: 0.95rem;
+      }
+
+      nav.toc a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      nav.toc a:hover {
+        color: var(--text);
+        text-decoration: underline;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        margin: 0 0 1.25rem;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 34rem;
+        font-size: 0.925rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.7rem 0.85rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      th {
+        background: var(--surface-2);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      footer {
+        margin-top: 3.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 34rem) {
+        nav.toc ol {
+          columns: 1;
+        }
+      }
+
+      @media print {
+        :root {
+          --bg: #ffffff;
+          --surface: #f7f8fa;
+          --surface-2: #f0f2f6;
+          --border: #d3d7e0;
+          --text: #111318;
+          --muted: #4a4f5c;
+          --accent-soft: #f2f4ff;
+        }
+
+        a {
+          color: #1a2ba8;
+        }
+
+        .page {
+          max-width: none;
+          padding: 0;
+        }
+
+        nav.toc {
+          display: none;
+        }
+
+        h2,
+        h3 {
+          break-after: avoid;
+        }
+
+        .card,
+        .table-wrap,
+        tr {
+          break-inside: avoid;
+        }
+
+        .table-wrap {
+          overflow-x: visible;
+        }
+
+        table {
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="masthead">
+        <img src="/public/icon.svg" alt="" width="36" height="32" />
+        <a href="/">Solid Share</a>
+      </div>
+
+      <h1>Privacy Policy</h1>
+      <p class="meta">
+        <strong>Last updated:</strong> 5 August 2026 &nbsp;·&nbsp; <strong>Effective:</strong> 5
+        August 2026
+      </p>
+      <p class="meta" style="margin-top: 0.4rem">
+        Applies to the Solid Share Android application (package
+        <code>com.erfangholami.solidshare</code>) in every distribution, and to the website
+        <code>solidshare.app</code>.
+      </p>
+
+      <div class="card accent">
+        <h2>The short version</h2>
+        <ul>
+          <li>
+            <strong>Solid Share has no servers, no accounts and no database of its own.</strong> Your
+            files, contacts, tickets and shares live on the Solid Pod you choose, under your own
+            identity.
+          </li>
+          <li>
+            <strong>The developer cannot see your data.</strong> The app talks directly from your
+            phone to your pod. Nothing passes through us.
+          </li>
+          <li>
+            <strong>No ads, no data sales, no advertising ID, no cross-app tracking, no profiling.</strong>
+          </li>
+          <li>
+            <strong>Contacts, camera and notifications are optional</strong> and used only for the
+            features described below. Denying them leaves the rest of the app working.
+          </li>
+          <li>
+            <strong>The Google Play build sends crash reports and basic usage events to Google
+              (Firebase).</strong> The F-Droid / GitHub build contains no analytics code at all.
+          </li>
+          <li>
+            <strong>Deleting is under your control:</strong> sign out to remove the local copy,
+            delete resources on your pod to remove the originals.
+          </li>
+        </ul>
+      </div>
+
+      <nav class="toc card" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#who">1. Who is responsible</a></li>
+          <li><a href="#model">2. Where your data lives</a></li>
+          <li><a href="#builds">3. Two builds of the app</a></li>
+          <li><a href="#data">4. What the app handles</a></li>
+          <li><a href="#permissions">5. Permissions</a></li>
+          <li><a href="#recipients">6. Who receives data</a></li>
+          <li><a href="#never">7. What we never do</a></li>
+          <li><a href="#bases">8. Legal bases</a></li>
+          <li><a href="#retention">9. Retention</a></li>
+          <li><a href="#delete">10. Deleting your data</a></li>
+          <li><a href="#rights">11. Your rights</a></li>
+          <li><a href="#security">12. Security</a></li>
+          <li><a href="#children">13. Children</a></li>
+          <li><a href="#transfers">14. International transfers</a></li>
+          <li><a href="#website">15. This website</a></li>
+          <li><a href="#changes">16. Changes</a></li>
+          <li><a href="#contact">17. Contact</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="who">1. Who is responsible</h2>
+      <p>
+        Solid Share is developed and published by <strong>Erfan Gholami</strong>, an independent
+        developer. For the limited data described in this policy that actually reaches us or our
+        processors — essentially, diagnostics from the Google Play build and website request logs —
+        Erfan Gholami is the data controller.
+      </p>
+      <p>
+        For the content you keep on your Solid Pod, <strong>you</strong> are in control: it is stored
+        by the pod provider you chose, under your own account, and Solid Share is only the client
+        application you use to work with it.
+      </p>
+      <p>
+        Contact for privacy questions and data requests:
+        <a href="mailto:erfangholami76@gmail.com">erfangholami76@gmail.com</a>.
+      </p>
+
+      <h2 id="model">2. Where your data lives</h2>
+      <p class="lede">
+        Solid Share is a client for <a href="https://solidproject.org/">Solid</a> Pods. It is not a
+        service that stores your data.
+      </p>
+      <p>
+        When you sign in, you authenticate directly with the pod provider you picked, using
+        Solid-OIDC. From then on the app reads and writes resources on <em>your</em> pod: files,
+        contacts, tickets, share records and notifications. Those requests go from your phone to your
+        pod provider. They do not pass through any server operated by us, because no such server
+        exists.
+      </p>
+      <p>The domain <code>solidshare.app</code> serves only static files:</p>
+      <ul>
+        <li>this website;</li>
+        <li>
+          the OAuth Client ID Document at <code>/.well-known/clientid.jsonld</code>, which your pod
+          provider fetches during login so it can identify the app;
+        </li>
+        <li>
+          the Android App Links verification file at <code>/.well-known/assetlinks.json</code>;
+        </li>
+        <li>share and ticket links, which the app intercepts and opens locally (see
+          <a href="#links">§4.6</a>).</li>
+      </ul>
+      <p>
+        Your pod provider has its own privacy policy and terms, which govern the data you store
+        there. Please read them — that is where your content actually resides.
+      </p>
+
+      <h2 id="builds">3. Two builds of the app</h2>
+      <p>
+        Solid Share ships in two forms. They contain the same features, but differ in one privacy
+        respect: diagnostics.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Build</th>
+              <th scope="col">Where you get it</th>
+              <th scope="col">Diagnostics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google Play</strong></td>
+              <td>Google Play Store</td>
+              <td>
+                Firebase Crashlytics, Google Analytics for Firebase and Firebase Performance
+                Monitoring, enabled by default — see <a href="#diagnostics">§4.8</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>FOSS</strong></td>
+              <td>F-Droid, GitHub releases</td>
+              <td>
+                <strong>None.</strong> The build contains no Firebase or Google Play Services code
+                whatsoever; there is nothing to switch off
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        If you would rather no diagnostics were collected at all, install the FOSS build. Both builds
+        are produced from the same public source code at
+        <a href="https://github.com/erfangholami/SolidShare">github.com/erfangholami/SolidShare</a>,
+        which is MIT-licensed, so every claim in this policy can be checked against the code.
+      </p>
+
+      <h2 id="data">4. What the app handles</h2>
+
+      <h3>4.1 Your Solid identity and sign-in</h3>
+      <p>
+        Signing in opens your pod provider's own login page in a browser tab. Solid Share never sees,
+        handles or stores your password. Once you approve, the app receives and keeps on your device:
+      </p>
+      <ul>
+        <li>your WebID (the URL that identifies you) and your pod provider's address;</li>
+        <li>
+          the profile information published at your WebID — typically your name, photo and any
+          details you chose to make public;
+        </li>
+        <li>
+          OAuth tokens and a cryptographic key pair used to prove that the tokens are yours
+          (DPoP, <a href="https://datatracker.ietf.org/doc/html/rfc9449">RFC 9449</a>).
+        </li>
+      </ul>
+      <p>
+        Tokens and the key pair are stored encrypted on your device, with the encryption key held in
+        the Android Keystore, and are sent only to your pod provider and your pod. You can sign in
+        with several accounts; each account's data is kept separate on the device, and signing an
+        account out erases its local data.
+      </p>
+
+      <h3>4.2 Files, photos and videos</h3>
+      <p>
+        The app uploads to your pod only what you explicitly choose: a file picked through Android's
+        document picker, an image or video picked through Android's photo picker, or a photo or video
+        you take in the moment with the camera. Downloads are written to the location you select.
+      </p>
+      <p>
+        Solid Share does <strong>not</strong> request broad access to your photo library or to all
+        files on the device, and it does not scan your storage. It sees only what you hand it.
+      </p>
+      <p>
+        To make browsing work offline, the app keeps a local copy of file <em>metadata</em> — names,
+        sizes, types, timestamps, pod addresses — and of changes you made while offline, until they
+        can be sent to your pod. This cache is encrypted (see <a href="#security">§12</a>).
+      </p>
+
+      <h3>4.3 Contacts</h3>
+      <p>
+        Contacts are a feature you turn on, and they only ever move between your device and your pod.
+        Nothing is sent to us or to any third party. Two directions exist, both requiring the
+        Contacts permission:
+      </p>
+      <ul>
+        <li>
+          <strong>Pod → device.</strong> Contacts stored on your pod appear in your phone's Contacts
+          app under a "Solid Share" account, one per signed-in WebID, so other apps on your phone can
+          use them. Signing out removes those entries from the device. Edits you make to them in the
+          Contacts app are sent back to your pod. This runs about every four hours and when you open
+          the contacts screen.
+        </li>
+        <li>
+          <strong>Device → pod.</strong> An explicit, one-time <em>"Import phone &amp; Google
+          contacts"</em> action copies contacts from your device into your pod. It is a copy: your
+          phone contacts and your Google contacts are never modified or deleted by Solid Share.
+        </li>
+      </ul>
+      <p>
+        You can also import and export contacts as vCard (<code>.vcf</code>) files through Android's
+        file picker; the app reads or writes only the file you select.
+      </p>
+      <p>
+        The contact fields handled are the ordinary ones — names, phone numbers, email addresses,
+        postal addresses, organisations, notes, photos, WebIDs and similar — and they are written to
+        your pod and cached, encrypted, on your device.
+      </p>
+      <p>
+        Because contacts describe other people, please remember that uploading them to your pod makes
+        you responsible for that data under applicable law, and that your pod provider will store it.
+        If you do not want that, do not enable contacts: nothing else in the app depends on it.
+      </p>
+
+      <h3>4.4 Tickets and passes</h3>
+      <p>
+        Tickets you add — by scanning a barcode, filling in the form, or importing an Apple Wallet
+        <code>.pkpass</code> file — are stored on your pod, together with the original pass file when
+        there is one. Barcodes are decoded entirely on your device with a free-software decoder; no
+        camera image ever leaves the phone.
+      </p>
+      <p>
+        <strong>Pass updates.</strong> If an imported pass declares an issuer update service, the app
+        asks that issuer — the airline, transport operator or venue that produced the pass, not us —
+        for an updated copy roughly every twelve hours. That request carries the pass identifiers and
+        the pass's own authentication token, both of which were inside the file the issuer gave you.
+        As with any web request, the issuer can see your IP address and that the pass is still in use.
+        Deleting the ticket stops the requests.
+      </p>
+
+      <h3>4.5 Sharing</h3>
+      <p>When you share something, the app, acting as you and on your pod:</p>
+      <ul>
+        <li>writes an access-control rule granting the recipient's WebID the access level you chose;</li>
+        <li>records a share entry so the app can show what you shared, with whom and when;</li>
+        <li>
+          may place a notification in the recipient's Solid inbox, so their app can tell them. That
+          notification contains your WebID, the resource address and the access level, and it is
+          delivered to the recipient's pod provider.
+        </li>
+      </ul>
+      <p>
+        The recipient — and their pod provider — necessarily learn your WebID and what you shared.
+        That is the point of sharing, but it is worth stating plainly.
+      </p>
+      <p>
+        Roughly every fifteen minutes, the app checks <em>your own</em> pod's inbox for incoming share
+        notifications so it can show them to you. That check goes to your pod, nowhere else.
+      </p>
+
+      <h3 id="links">4.6 Share links and QR codes</h3>
+      <p>
+        A share link looks like
+        <code>https://solidshare.app/s?resource=…&amp;owner=…&amp;type=…</code>. Anyone holding the
+        link can read those values, so treat a share link as sensitive and send it only to the person
+        it is meant for.
+      </p>
+      <p>
+        When the link is opened on a device with Solid Share installed, Android hands it straight to
+        the app and nothing is requested from the network. If it is opened in a web browser instead —
+        for example on a computer, or on a phone without the app — then, as with any web address, the
+        full link including its parameters is sent to the server hosting <code>solidshare.app</code>
+        and may appear in that host's standard request logs (see <a href="#website">§15</a>). We do
+        not read, analyse or build profiles from those logs.
+      </p>
+      <p>Ticket links (<code>https://solidshare.app/t#…</code>) keep their payload after the
+        <code>#</code>, which browsers never transmit to the server.</p>
+
+      <h3>4.7 Notifications and background work</h3>
+      <p>
+        Notifications are generated locally on your device — new shares, sync results, import and
+        export progress. Solid Share uses no push messaging service, so no third party is involved in
+        delivering them. Import and export run as foreground data-sync jobs so Android does not
+        interrupt them; the notification you see is what that requires.
+      </p>
+
+      <h3 id="diagnostics">4.8 Diagnostics — Google Play build only</h3>
+      <p>
+        The Google Play build includes Firebase Crashlytics, Google Analytics for Firebase and
+        Firebase Performance Monitoring, so that crashes and failures can be found and fixed. They are
+        active in released Play builds and collect:
+      </p>
+      <ul>
+        <li>
+          <strong>Crash and error reports</strong> — exception type, stack trace, a short error
+          message, the operation that failed, app version, device model, Android version, locale,
+          timestamp, and a Firebase installation identifier;
+        </li>
+        <li>
+          <strong>A small set of app events</strong> — that a login succeeded or failed, that a
+          session expired with a short error code, which screen the app started on, how long an
+          operation took, and non-fatal errors;
+        </li>
+        <li>
+          <strong>Performance measurements</strong> — app start-up and screen rendering times.
+        </li>
+      </ul>
+      <p>What is deliberately kept out of these reports:</p>
+      <ul>
+        <li>
+          <strong>No file, contact or ticket content, and no resource addresses.</strong> Network
+          diagnostics record only the origin of a pod server (<code>scheme://host</code>); the path of
+          a resource, which in Solid identifies both you and the thing itself, is stripped before
+          anything is reported.
+        </li>
+        <li>
+          <strong>No WebID.</strong> Where an identity provider is recorded, it is recorded as a host
+          name only.
+        </li>
+        <li>
+          <strong>No advertising ID.</strong> Its collection is switched off in the app's manifest,
+          and there is no advertising or attribution SDK in the app.
+        </li>
+        <li><strong>No precise location.</strong> The app requests no location permission at all.</li>
+      </ul>
+      <p>
+        Google processes this data on our behalf as a processor. See
+        <a href="https://firebase.google.com/support/privacy">Firebase's privacy documentation</a> and
+        the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Google deletes
+        Crashlytics reports after 90 days; analytics event data is deleted by Google at the end of the
+        retention window configured for the project, which is at most 14 months.
+      </p>
+      <p>
+        <strong>If you want none of this:</strong> install the FOSS build from F-Droid or GitHub. It
+        contains no Firebase code, so nothing is collected or transmitted.
+      </p>
+
+      <h3>4.9 Data stored on your device</h3>
+      <p>
+        The app keeps, on the device only: the encrypted offline cache described above, your
+        settings, sign-in state and tokens, imported pass files, and the queue of changes waiting to
+        reach your pod. Android's own backup feature may include app data in the backup of your
+        device if you have that turned on in your Android settings; that backup goes to your Google
+        account, not to us, and is governed by Google's terms. You can exclude Solid Share in
+        Android's backup settings.
+      </p>
+
+      <h2 id="permissions">5. Permissions</h2>
+      <p>
+        Every permission below is requested at the moment the feature needs it, with an explanation,
+        and can be withdrawn at any time in Android's settings.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Permission</th>
+              <th scope="col">Why the app asks</th>
+              <th scope="col">If you refuse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>CAMERA</code></td>
+              <td>
+                Scanning share, profile and ticket QR codes and barcodes, and taking a photo or video
+                to upload to your pod. Frames are analysed in memory on the device
+              </td>
+              <td>Scanning and in-app capture are unavailable; everything else works</td>
+            </tr>
+            <tr>
+              <td><code>READ_CONTACTS</code>, <code>WRITE_CONTACTS</code></td>
+              <td>
+                Showing your pod contacts in the phone's Contacts app, sending edits back to your pod,
+                and the one-time import of device contacts into your pod (<a href="#data">§4.3</a>)
+              </td>
+              <td>
+                The contacts feature stays off. Files, sharing, tickets and notifications are
+                unaffected
+              </td>
+            </tr>
+            <tr>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>Showing local notifications about shares, sync and import/export progress</td>
+              <td>The app works silently; nothing else changes</td>
+            </tr>
+            <tr>
+              <td>
+                <code>READ_SYNC_SETTINGS</code>, <code>WRITE_SYNC_SETTINGS</code>
+              </td>
+              <td>Registering the contacts sync with Android's account and sync framework</td>
+              <td>Automatic contacts sync does not run</td>
+            </tr>
+            <tr>
+              <td>
+                <code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>
+              </td>
+              <td>
+                Keeping contact imports and exports running to completion instead of being killed
+                mid-way
+              </td>
+              <td>Granted at install time; no runtime prompt</td>
+            </tr>
+            <tr>
+              <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
+              <td>
+                Talking to your pod, and detecting whether you are offline so the app can queue
+                changes instead of failing
+              </td>
+              <td>Granted at install time; no runtime prompt</td>
+            </tr>
+            <tr>
+              <td>
+                <code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and older only)
+              </td>
+              <td>Saving downloaded files on older Android versions, which had no other mechanism</td>
+              <td>Downloads cannot be saved on those versions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The app requests no location, microphone, SMS, call-log, calendar, health, "all files access"
+        or broad media permissions.
+      </p>
+
+      <h2 id="recipients">6. Who receives data</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Recipient</th>
+              <th scope="col">What they receive</th>
+              <th scope="col">Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Your Solid Pod provider</strong> (you choose it)</td>
+              <td>
+                Everything you store through the app — files, contacts, tickets, share records — plus
+                your sign-in requests and your IP address
+              </td>
+              <td>
+                It is your storage. Governed by that provider's own privacy policy and terms
+              </td>
+            </tr>
+            <tr>
+              <td><strong>People you share with</strong></td>
+              <td>
+                The resource you shared, your WebID, and a notification in their pod's inbox
+              </td>
+              <td>You asked the app to share it</td>
+            </tr>
+            <tr>
+              <td><strong>Pass issuers</strong> (airline, venue, operator)</td>
+              <td>
+                Only if you import a pass with an update service: the pass identifiers and its own
+                token, plus your IP address, about every 12 hours
+              </td>
+              <td>To keep a gate change or seat number current (<a href="#data">§4.4</a>)</td>
+            </tr>
+            <tr>
+              <td><strong>Google</strong> — Play build only</td>
+              <td>The crash and usage diagnostics listed in <a href="#diagnostics">§4.8</a></td>
+              <td>
+                Crash reporting and quality measurement, as our processor. Not present in the FOSS
+                build
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Google Play</strong></td>
+              <td>
+                Installation, update and (if you report one) crash data that the Play Store itself
+                collects
+              </td>
+              <td>
+                A consequence of distributing through the store; governed by Google's own policies
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Cloudflare</strong></td>
+              <td>
+                Standard web request logs for <code>solidshare.app</code>, including IP address, when
+                a page or link on that domain is opened in a browser
+              </td>
+              <td>Hosting and delivering this website (<a href="#website">§15</a>)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        There is no other recipient. We do not use advertising networks, attribution SDKs, marketing
+        platforms, customer-data platforms or data brokers, and we do not disclose data to anyone for
+        their own purposes. If we were ever legally compelled to disclose something, we could only
+        hand over what we actually hold — which is the diagnostics and log data described above, and
+        nothing from your pod.
+      </p>
+
+      <h2 id="never">7. What we never do</h2>
+      <ul>
+        <li>We never sell or rent personal data, and never share it for advertising.</li>
+        <li>We show no ads and use no advertising identifier.</li>
+        <li>We do not track you across apps or websites, and we build no user profiles.</li>
+        <li>
+          We have no access to your pod, your files, your contacts or your tickets — no credentials,
+          no back door, no copy.
+        </li>
+        <li>Solid Share creates no account with us; there is no account with us to create.</li>
+        <li>We do not read the contents of your device beyond the items you explicitly pick.</li>
+      </ul>
+
+      <h2 id="bases">8. Legal bases (GDPR)</h2>
+      <p>Where the GDPR applies, we rely on:</p>
+      <ul>
+        <li>
+          <strong>Performance of a contract / provision of the service you requested</strong>
+          (Art. 6(1)(b)) — handling the data needed to sign you in and to move your content between
+          your device and your pod, at your instruction;
+        </li>
+        <li>
+          <strong>Consent</strong> (Art. 6(1)(a)) — every Android runtime permission: camera,
+          contacts and notifications. You give it in the system dialog and can withdraw it at any time
+          in Android's settings, with effect for the future;
+        </li>
+        <li>
+          <strong>Legitimate interests</strong> (Art. 6(1)(f)) — the crash and stability diagnostics
+          in the Google Play build, whose purpose is keeping the app working and secure. We minimise
+          them as described in <a href="#diagnostics">§4.8</a>, and a build with no diagnostics at all
+          is published alongside it so the choice remains yours.
+        </li>
+      </ul>
+      <p>
+        For the content you place on your pod, the pod provider processes it under the agreement
+        between you and them.
+      </p>
+
+      <h2 id="retention">9. Retention</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Kept</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Everything on your pod</td>
+              <td>Until you delete it. Your pod provider's retention terms apply</td>
+            </tr>
+            <tr>
+              <td>Local cache, queued changes, imported pass files</td>
+              <td>
+                Until you sign that account out, clear the app's storage, or uninstall the app
+              </td>
+            </tr>
+            <tr>
+              <td>Sign-in tokens</td>
+              <td>Until they expire, or you sign out — whichever comes first</td>
+            </tr>
+            <tr>
+              <td>Contacts mirrored into the phone's Contacts app</td>
+              <td>Until you sign out or remove the Solid Share account on the device</td>
+            </tr>
+            <tr>
+              <td>Crash reports (Play build)</td>
+              <td>Deleted by Google after 90 days</td>
+            </tr>
+            <tr>
+              <td>Analytics events (Play build)</td>
+              <td>Deleted by Google at the end of the configured window, at most 14 months</td>
+            </tr>
+            <tr>
+              <td>Website request logs</td>
+              <td>Short-lived logs held by our hosting provider, Cloudflare</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="delete">10. Deleting your data</h2>
+      <p>
+        <strong>Solid Share creates no account on any system we operate</strong>, so there is no
+        account with us to delete. Your Solid identity belongs to your pod provider; closing it is
+        done with them.
+      </p>
+      <p>To remove data:</p>
+      <ul>
+        <li>
+          <strong>Sign an account out in the app</strong> — erases that account's local data, its
+          tokens, and the contacts mirrored into your phone's Contacts app.
+        </li>
+        <li>
+          <strong>Delete resources on your pod</strong> — files in the Files tab, tickets in Wallet,
+          contacts in Contacts (including "Delete all contacts"). Deletion happens on your pod, so it
+          is permanent.
+        </li>
+        <li>
+          <strong>Stop a share</strong> — revoke access in the app; the recipient loses access at your
+          pod.
+        </li>
+        <li>
+          <strong>Uninstall the app</strong>, or clear its storage in Android's settings — removes
+          everything the app kept on the device. Your pod is untouched.
+        </li>
+        <li>
+          <strong>Diagnostics (Play build)</strong> — write to
+          <a href="mailto:erfangholami76@gmail.com">erfangholami76@gmail.com</a> and we will delete what
+          we can identify; otherwise the reports expire on the schedule in
+          <a href="#retention">§9</a>. Installing the FOSS build prevents any further collection.
+        </li>
+      </ul>
+
+      <h2 id="rights">11. Your rights</h2>
+      <p>
+        Subject to your local law, you have the right to access, correct, erase, restrict, object to
+        and receive a portable copy of your personal data, and to lodge a complaint with a data
+        protection authority.
+      </p>
+      <p>
+        In practice, most of these you exercise yourself and immediately: the data is on your pod,
+        under your identity, and Solid Share reads, edits, exports (contacts to vCard) and deletes it
+        on your instruction. No request to us is needed, and we could not act on your pod on your
+        behalf even if you asked.
+      </p>
+      <p>
+        For anything we do hold — the diagnostics and website logs — write to
+        <a href="mailto:erfangholami76@gmail.com">erfangholami76@gmail.com</a>. We answer within 30 days.
+        If you are in the EU/EEA or the UK and you are not satisfied, you may complain to the data
+        protection authority of the country where you live or work.
+      </p>
+
+      <h2 id="security">12. Security</h2>
+      <ul>
+        <li>
+          All communication with your pod, your identity provider and any other server is over HTTPS.
+          On Android 9 and newer the system additionally forbids the app from making unencrypted HTTP
+          connections at all.
+        </li>
+        <li>
+          Access tokens are bound to a key pair held by your device (DPoP), so a stolen token is not
+          usable on its own.
+        </li>
+        <li>
+          Tokens and identity material are encrypted at rest with a key held in the Android Keystore,
+          which is hardware-backed on most devices and never leaves it.
+        </li>
+        <li>
+          The offline cache is stored in a SQLCipher-encrypted database whose randomly generated key
+          is itself encrypted by the Android Keystore.
+        </li>
+        <li>
+          The app is sandboxed by Android: no other app can read its data, and Solid Share cannot read
+          theirs.
+        </li>
+        <li>
+          The source code is public and MIT-licensed, so the security claims here are open to
+          inspection. If you find a vulnerability, please report it to
+          <a href="mailto:erfangholami76@gmail.com">erfangholami76@gmail.com</a> rather than filing a
+          public issue, and we will respond as quickly as we can.
+        </li>
+      </ul>
+      <p>
+        No system is perfectly secure. Because we hold no copy of your data, a breach of ours could
+        not expose it — but the security of your pod and your device also matters, so please keep both
+        protected.
+      </p>
+
+      <h2 id="children">13. Children</h2>
+      <p>
+        Solid Share is a general-audience tool and is not directed to children. It is not designed
+        for, marketed to, or intended to be used by children under 13 (or the higher age of digital
+        consent in your country, which is up to 16 in parts of the EU). We do not knowingly collect
+        personal data from children. If you believe a child has provided data to us, write to
+        <a href="mailto:erfangholami76@gmail.com">erfangholami76@gmail.com</a> and we will delete it.
+      </p>
+
+      <h2 id="transfers">14. International transfers</h2>
+      <p>
+        The processors named in this policy — Google (diagnostics, Play build) and Cloudflare
+        (website hosting) — operate globally and may process data outside your country, including in
+        the United States. Both offer transfer mechanisms recognised under EU law, including the
+        European Commission's Standard Contractual Clauses, and both are certified under the EU-U.S.
+        Data Privacy Framework.
+      </p>
+      <p>
+        Where your pod data physically lives is determined by the pod provider you chose, not by us.
+      </p>
+
+      <h2 id="website">15. This website</h2>
+      <ul>
+        <li>
+          <strong>No cookies</strong> are set by <code>solidshare.app</code>, and there is no
+          analytics, tag manager or tracking pixel on it.
+        </li>
+        <li>
+          <strong>This privacy policy page loads no third-party resources at all.</strong> Opening it
+          contacts nothing except the site's own host.
+        </li>
+        <li>
+          The site is served through <strong>Cloudflare</strong>, which processes requests as our
+          hosting and delivery provider and keeps standard, short-lived request logs (IP address,
+          requested URL, user agent, timestamp) for delivery, security and abuse prevention. See the
+          <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.
+        </li>
+        <li>
+          The home page currently loads a web font from Google Fonts, which means Google receives
+          your IP address when that page loads. No other page does.
+        </li>
+        <li>
+          Share links opened in a browser transmit their parameters to this host, as explained in
+          <a href="#links">§4.6</a>.
+        </li>
+      </ul>
+
+      <h2 id="changes">16. Changes to this policy</h2>
+      <p>
+        If the app's data handling changes, this page changes with it, and the date at the top is
+        updated. Material changes will also be noted in the release notes of the version that
+        introduces them, so you can see what changed and when. Because the page is served from a
+        public git repository, its full history is auditable.
+      </p>
+
+      <h2 id="contact">17. Contact</h2>
+      <p>
+        Privacy questions, data requests and security reports:
+        <a href="mailto:erfangholami76@gmail.com">erfangholami76@gmail.com</a>
+      </p>
+      <p>
+        Bugs and feature requests:
+        <a href="https://github.com/erfangholami/SolidShare/issues">the GitHub issue tracker</a>
+      </p>
+      <p>Controller: Erfan Gholami, independent developer, publisher of Solid Share.</p>
+
+      <footer>
+        <p>Solid Share — Privacy Policy, 5 August 2026. <a href="/">Back to solidshare.app</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

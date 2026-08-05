@@ -22,11 +22,14 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  min-height: 100vh;
-  min-height: 100svh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,4 +57,21 @@ p {
   color: var(--muted);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+footer {
+  padding: 0 1.5rem 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--text);
+  text-decoration: underline;
 }
