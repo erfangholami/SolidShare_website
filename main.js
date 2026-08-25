@@ -1,6 +1,7 @@
 /* ============================================================
    Solid Share — solidshare.app
-   Scroll reveals and the header state. No dependencies.
+   Header state, mobile menu, install bar, scroll reveals.
+   No dependencies.
    ============================================================ */
 
 (function () {
@@ -23,12 +24,87 @@
     ).observe(sentinel);
   }
 
-  /* ---- 2. Reveal each element the first time it enters the viewport ---- */
+  /* ---- 2. Mobile menu ---- */
+
+  var toggle = document.querySelector(".menu-toggle");
+  var nav = document.getElementById("site-nav");
+
+  if (header && toggle && nav) {
+    var setOpen = function (open) {
+      header.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    toggle.addEventListener("click", function () {
+      setOpen(!header.classList.contains("nav-open"));
+    });
+
+    // A tap on a link closes the menu before the page scrolls to the target.
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    document.addEventListener("click", function (e) {
+      if (header.classList.contains("nav-open") && !e.target.closest(".site-header")) {
+        setOpen(false);
+      }
+    });
+  }
+
+  /* ---- 3. Mobile install bar ---- */
+
+  var bar = document.getElementById("install-bar");
+
+  if (bar) {
+    var dismissed = false;
+    try {
+      dismissed = sessionStorage.getItem("ss-install-bar") === "off";
+    } catch (_) {}
+
+    if (!dismissed) {
+      bar.hidden = false;
+      var nearDownload = false;
+
+      var updateBar = function () {
+        bar.classList.toggle("is-shown", window.scrollY > 500 && !nearDownload);
+      };
+
+      window.addEventListener("scroll", updateBar, { passive: true });
+      updateBar();
+
+      // The download section carries the same call to action — step aside there.
+      var downloadSec = document.getElementById("download");
+      if (supported && downloadSec) {
+        new IntersectionObserver(
+          function (entries) {
+            nearDownload = entries[0].isIntersecting;
+            updateBar();
+          },
+          { threshold: 0.1 }
+        ).observe(downloadSec);
+      }
+
+      bar.querySelector(".install-bar-close").addEventListener("click", function () {
+        bar.classList.remove("is-shown");
+        bar.hidden = true;
+        window.removeEventListener("scroll", updateBar);
+        try {
+          sessionStorage.setItem("ss-install-bar", "off");
+        } catch (_) {}
+      });
+    }
+  }
+
+  /* ---- 4. Reveal each element the first time it enters the viewport ---- */
 
   var items = document.querySelectorAll(".reveal");
 
   if (reduced || !supported) {
-    // Show everything at once and stop here.
+    // Show everything at once.
     for (var i = 0; i < items.length; i++) {
       items[i].classList.add("is-visible");
     }

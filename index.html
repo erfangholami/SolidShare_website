@@ -51,13 +51,26 @@
           <img src="/public/icon.svg" alt="" width="28" height="25" />
           <span>Solid Share</span>
         </a>
-        <nav class="nav" aria-label="Main">
+        <nav class="nav" id="site-nav" aria-label="Main">
           <a href="#how">How it works</a>
           <a href="#features">Features</a>
           <a href="#privacy">Privacy</a>
+          <a href="#faq">FAQ</a>
           <a href="https://github.com/erfangholami/SolidShare" rel="noopener">Source</a>
         </nav>
         <a class="btn btn-primary btn-sm" href="#download">Get the app</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="mt-open" d="M4 7h16M4 12h16M4 17h16" />
+            <path class="mt-close" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -119,7 +132,8 @@
           </div>
 
           <p class="fineprint anim" style="--d: 300ms">
-            Android 8.0 and later · The F-Droid build links no proprietary dependency
+            Android 8.0 and later · The F-Droid build links no proprietary dependency ·
+            <a href="https://github.com/erfangholami/SolidShare/releases" rel="noopener">APK on GitHub</a>
           </p>
         </div>
 
@@ -428,6 +442,73 @@
         </div>
       </section>
 
+      <!-- ================= FAQ ================= -->
+      <section class="section" id="faq">
+        <div class="shell">
+          <header class="section-head reveal">
+            <p class="kicker">FAQ</p>
+            <h2>Questions, answered</h2>
+          </header>
+
+          <div class="faq reveal">
+            <details>
+              <summary>Do I need a Solid pod before I install the app?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                Yes — your data lives on a pod. The login screen lists public providers such as
+                Inrupt, Solid Community and Data Pod, and accepts any custom OIDC issuer URL,
+                including a server you run yourself. A pod at a public provider is created in a
+                few minutes. <a href="https://solidproject.org/" rel="noopener">Learn about Solid pods</a>.
+              </p>
+            </details>
+
+            <details>
+              <summary>How much does it cost?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                Nothing. The app is free software under the MIT licence, with no ads and no paid
+                tiers. Pod storage comes from the provider you pick — several offer free space,
+                and a self-hosted server costs only the hardware it runs on.
+              </p>
+            </details>
+
+            <details>
+              <summary>Which Android versions does it run on?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                Android 8.0 and later. The app is on F-Droid today, the APK is on GitHub, and the
+                Google Play listing is on its way.
+              </p>
+            </details>
+
+            <details>
+              <summary>What is different between the F-Droid and Google Play builds?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                The features are identical. The F-Droid and GitHub build contains no analytics
+                code at all. The Google Play build adds Firebase crash reporting. The
+                <a href="/privacy">privacy policy</a> describes both in full.
+              </p>
+            </details>
+
+            <details>
+              <summary>Does it work offline?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                Yes. Everything you have seen is kept on the device in an encrypted database and
+                opens with no connection. Writes queue and sync by themselves when the connection
+                returns, and you can pin a file to keep its content available offline.
+              </p>
+            </details>
+
+            <details>
+              <summary>Where do I report a bug or ask for a feature?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                Open an issue on
+                <a href="https://github.com/erfangholami/SolidShare/issues" rel="noopener">GitHub</a>,
+                or reach me through my
+                <a href="https://erfangholami.com/contact" rel="noopener">contact page</a>.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <!-- ================= DOWNLOAD ================= -->
       <section class="section download" id="download">
         <div class="shell">
@@ -448,6 +529,17 @@
                 <img src="/public/badges/google-play.png" alt="Get it on Google Play" width="646" height="250" />
                 <span class="soon-pill">Soon</span>
               </span>
+            </div>
+
+            <div class="qr-wrap">
+              <img
+                src="/public/qr-fdroid.svg"
+                alt="QR code that opens the Solid Share page on F-Droid"
+                width="104"
+                height="104"
+                loading="lazy"
+              />
+              <p>On a computer?<br />Scan the code to open the F-Droid page on your phone.</p>
             </div>
 
             <p class="fineprint">
@@ -474,6 +566,7 @@
             <h4>App</h4>
             <a href="#features">Features</a>
             <a href="#how">How it works</a>
+            <a href="#faq">FAQ</a>
             <a href="#download">Download</a>
           </div>
           <div>
@@ -481,21 +574,39 @@
             <a href="https://github.com/erfangholami/SolidShare" rel="noopener">Source code</a>
             <a href="https://github.com/erfangholami/SolidShare/releases" rel="noopener">Releases</a>
             <a href="https://f-droid.org/packages/com.erfangholami.solidshare/" rel="noopener">F-Droid</a>
+            <a href="https://github.com/erfangholami/SolidShare/issues" rel="noopener">Report an issue</a>
           </div>
           <div>
-            <h4>Legal</h4>
+            <h4>More</h4>
             <a href="/privacy">Privacy policy</a>
             <a href="https://solidproject.org/" rel="noopener">About Solid</a>
-            <a href="mailto:erfangholami76@gmail.com">Contact</a>
+            <a href="https://erfangholami.com/contact" rel="noopener">Contact</a>
           </div>
         </nav>
       </div>
 
       <div class="shell footer-base">
-        <p>MIT licence · Built by Erfan Gholami</p>
+        <p>MIT licence · Built by <a href="https://erfangholami.com" rel="noopener">Erfan Gholami</a></p>
         <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
       </div>
     </footer>
+
+    <div class="install-bar" id="install-bar" role="region" aria-label="Install Solid Share" hidden>
+      <img src="/public/icon.svg" alt="" width="26" height="23" />
+      <div class="install-bar-text">
+        <strong>Solid Share</strong>
+        <span>Free · Open source</span>
+      </div>
+      <a
+        class="btn btn-primary btn-sm"
+        href="https://f-droid.org/packages/com.erfangholami.solidshare/"
+        rel="noopener"
+        >Install</a
+      >
+      <button class="install-bar-close" type="button" aria-label="Dismiss">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+    </div>
 
     <script type="application/ld+json">
       {
@@ -509,7 +620,63 @@
         "license": "https://opensource.org/licenses/MIT",
         "description": "Solid Share turns your Solid pod into a personal data wallet on Android. Browse files, keep contacts, tickets and passes, and share them by WebID, link or QR code.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-        "author": { "@type": "Person", "name": "Erfan Gholami" }
+        "author": { "@type": "Person", "name": "Erfan Gholami", "url": "https://erfangholami.com" }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need a Solid pod before I install the app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — your data lives on a pod. The login screen lists public providers such as Inrupt, Solid Community and Data Pod, and accepts any custom OIDC issuer URL, including a server you run yourself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nothing. The app is free software under the MIT licence, with no ads and no paid tiers. Pod storage comes from the provider you pick."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Android versions does it run on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Android 8.0 and later. The app is on F-Droid today, the APK is on GitHub, and the Google Play listing is on its way."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is different between the F-Droid and Google Play builds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The features are identical. The F-Droid and GitHub build contains no analytics code at all. The Google Play build adds Firebase crash reporting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Everything you have seen is kept on the device in an encrypted database and opens with no connection. Writes queue and sync by themselves when the connection returns."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do I report a bug or ask for a feature?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open an issue on the GitHub repository, or use the contact page at erfangholami.com/contact."
+            }
+          }
+        ]
       }
     </script>
   </body>
