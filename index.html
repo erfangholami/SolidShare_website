@@ -388,6 +388,29 @@
 
             <article class="card reveal">
               <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><path d="M14 17.5h7" /><path d="M17.5 14v7" /></svg>
+              </span>
+              <h3>Other apps, your rules</h3>
+              <p>
+                Other Solid apps reach your pod through Solid Share, so no other app ever
+                holds your password. You choose what each one may do and where, and the Apps
+                tab narrows or removes it at any time.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z" /><path d="M5.5 6.5a16 16 0 0 0 13 0" /><path d="M5.5 17.5a16 16 0 0 1 13 0" /></svg>
+              </span>
+              <h3>In your language</h3>
+              <p>
+                English, German, Spanish, French and Italian. The app follows your phone
+                language, and you can pick a different one for Solid Share alone.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V7Z" /><path d="M9 12l2 2 4-4" /></svg>
               </span>
               <h3>Open standards</h3>
@@ -408,7 +431,10 @@
             <h2>Two builds. You choose what runs.</h2>
             <p class="section-sub">
               Solid Share has no database of its own. Your files, contacts, tickets and
-              shares live on the pod you chose, under your own identity.
+              shares live on the pod you chose, under your own identity. Other apps that ask
+              through Solid Share receive the results of a pod call, never a credential they
+              could reuse, and what you allowed each one stays on this device — it is never
+              written to your pod.
             </p>
           </header>
 
@@ -484,6 +510,18 @@
                 The features are identical. The F-Droid and GitHub build contains no analytics
                 code at all. The Google Play build adds Firebase crash reporting. The
                 <a href="/privacy">privacy policy</a> describes both in full.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can other apps on my phone use my pod?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                Yes, and only as far as you let them. A Solid app built on the Android Solid
+                Services SDK asks Solid Share instead of asking you for a password, so your
+                credentials never leave this app. The first time one asks, Solid Share shows you
+                which account it wants, what it wants to do and where. Nothing reaches your pod
+                until you allow it, the Apps tab lists everything you have allowed, and removing
+                an app takes effect on its next call.
               </p>
             </details>
 
@@ -575,6 +613,7 @@
             <a href="https://github.com/erfangholami/SolidShare/releases" rel="noopener">Releases</a>
             <a href="https://f-droid.org/packages/com.erfangholami.solidshare/" rel="noopener">F-Droid</a>
             <a href="https://github.com/erfangholami/SolidShare/issues" rel="noopener">Report an issue</a>
+            <a href="https://androidsolidservices.erfangholami.com" rel="noopener">Build an app on it</a>
           </div>
           <div>
             <h4>More</h4>
