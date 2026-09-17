@@ -310,7 +310,7 @@
 
       <h1>Privacy Policy</h1>
       <p class="meta">
-        <strong>Last updated:</strong> 5 August 2026 &nbsp;·&nbsp; <strong>Effective:</strong> 5
+        <strong>Last updated:</strong> 17 September 2026 &nbsp;·&nbsp; <strong>Effective:</strong> 5
         August 2026
       </p>
       <p class="meta" style="margin-top: 0.4rem">
@@ -652,11 +652,34 @@
       <h3>4.9 Data stored on your device</h3>
       <p>
         The app keeps, on the device only: the encrypted offline cache described above, your
-        settings, sign-in state and tokens, imported pass files, and the queue of changes waiting to
-        reach your pod. Android's own backup feature may include app data in the backup of your
+        settings, sign-in state and tokens, imported pass files, the queue of changes waiting to
+        reach your pod, and the record of which other apps you approved and what you let them
+        reach. Android's own backup feature may include app data in the backup of your
         device if you have that turned on in your Android settings; that backup goes to your Google
         account, not to us, and is governed by Google's terms. You can exclude Solid Share in
         Android's backup settings.
+      </p>
+
+      <h3 id="apps">4.10 Other apps on your device</h3>
+      <p>
+        From version 0.5.0 Solid Share can act for other Solid apps on the same phone. Instead of
+        each app signing in to your pod itself, it asks Solid Share, and you decide on a consent
+        screen what it may do — view, add, edit or full access — and where that applies: the whole
+        pod, named folders, or one kind of data such as your contacts. You can narrow it before you
+        allow it.
+      </p>
+      <p>
+        What you approved is kept <strong>on your device only</strong> and is never written to your
+        pod, so the list of apps you use is not published anywhere and does not follow you to a
+        second device. Solid Share reads the other app's name and icon from Android when it draws
+        the list; it copies neither.
+      </p>
+      <p>
+        You can change or withdraw any approval at any time on the Apps tab of the Share page.
+        Signing an account out removes that account's approvals, and uninstalling an app removes
+        its own. Once withdrawn, that app's next request to your pod fails. What an app already
+        read before you withdrew is outside our control, and is covered by that app's own privacy
+        policy, not this one.
       </p>
 
       <h2 id="permissions">5. Permissions</h2>
