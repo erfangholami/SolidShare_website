@@ -314,6 +314,16 @@ ol {
   padding: 0.4rem 0.95rem;
 }
 
+.eyebrow-link {
+  transition: color 0.3s, background 0.3s, border-color 0.3s;
+}
+
+.eyebrow-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(140, 160, 255, 0.35);
+}
+
 .dot {
   width: 6px;
   height: 6px;
@@ -579,6 +589,65 @@ h3 {
   font-size: 1.2rem;
   font-weight: 650;
   letter-spacing: -0.02em;
+}
+
+/* ---- what's new ---- */
+
+.release {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(1.75rem, 5vw, 3.5rem);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--surface), rgba(22, 25, 38, 0.3));
+}
+
+.release-intro h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  margin-bottom: 0.9rem;
+}
+
+.release-intro > p {
+  max-width: 46ch;
+  color: var(--muted);
+}
+
+.release-list {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.release-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.release-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.release-list strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .release {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---- steps ---- */

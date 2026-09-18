@@ -6,7 +6,7 @@
     <title>Solid Share — Files, contacts and passes on a pod you own</title>
     <meta
       name="description"
-      content="Solid Share is an open-source Android app for your Solid pod. Browse files, keep contacts and passes, and share them by WebID, link or QR code. No servers, no accounts, no tracking."
+      content="Solid Share is an open-source Android app for your Solid pod. Browse files, keep contacts and passes, share them by WebID, link or QR code, and let other apps reach your pod on terms you set. No servers, no accounts, no tracking."
     />
     <meta name="theme-color" content="#0F1118" />
     <meta name="robots" content="index, follow" />
@@ -84,9 +84,9 @@
         <div class="grid-lines" aria-hidden="true"></div>
 
         <div class="shell hero-inner">
-          <p class="eyebrow anim" style="--d: 0ms">
-            <span class="dot"></span> Free software · MIT licence · No servers
-          </p>
+          <a class="eyebrow eyebrow-link anim" href="#whats-new" style="--d: 0ms">
+            <span class="dot"></span> Version 0.5.0 · Other apps, on your terms
+          </a>
 
           <h1 class="anim" style="--d: 80ms">
             Files, contacts and passes<br />
@@ -185,6 +185,58 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18l6-6-6-6" /><path d="M8 6l-6 6 6 6" /></svg>
             <span>Open source, MIT licence</span>
           </div>
+        </div>
+      </section>
+
+      <!-- ================= WHAT'S NEW ================= -->
+      <section class="section" id="whats-new">
+        <div class="shell">
+          <article class="release reveal">
+            <div class="release-intro">
+              <p class="kicker">What's new</p>
+              <h2>Version 0.5.0</h2>
+              <p>
+                Solid Share is now the host app for Solid on Android: another app asks
+                it, instead of asking you for a password. The app also speaks four more
+                languages, opens your files without handing them to another app, and
+                answers on Home with what changed while you were away.
+              </p>
+              <a
+                class="link-arrow"
+                href="https://github.com/erfangholami/SolidShare/releases/tag/v0.5.0"
+                rel="noopener"
+              >
+                Read the release notes <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <ul class="release-list">
+              <li>
+                <strong>Apps, on your terms</strong>
+                Other apps reach your pod through Solid Share. You scope what each one
+                may do, and a new Apps tab takes it back.
+              </li>
+              <li>
+                <strong>Five languages</strong>
+                German, Spanish, French and Italian join English. The app follows your
+                phone, or the language you pick.
+              </li>
+              <li>
+                <strong>A new Home</strong>
+                Your inbox, the files you opened or that changed, what you shared, and
+                your next pass, on one screen.
+              </li>
+              <li>
+                <strong>Files that open in place</strong>
+                Images, PDFs and text open inside the app, and any app can share a file
+                straight into your pod.
+              </li>
+              <li>
+                <strong>Inrupt pods fixed</strong>
+                Share notifications and access requests now arrive on an Inrupt account.
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -292,6 +344,32 @@
           <div class="feature">
             <div class="feature-text reveal">
               <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><path d="M14 17.5h7" /><path d="M17.5 14v7" /></svg>
+              </span>
+              <h3>App access</h3>
+              <p>Other Solid apps reach your pod through Solid Share, so no other app ever holds your password.</p>
+              <ul class="ticks">
+                <li>An app asks for View, Add, Edit or Full access, and you see who asks, for which account, and where</li>
+                <li>Narrow it to the folders you pick, or to one data module such as Contacts, before you allow it</li>
+                <li>An Apps tab lists every app that has access, what it may do and where, and when you granted it</li>
+                <li>Uninstalling an app removes its access, and signing an account out drops that account's grants</li>
+                <li>What you allowed stays on this device, and is never written to your pod</li>
+              </ul>
+            </div>
+            <div class="feature-shot reveal">
+              <figure class="phone phone-flat">
+                <img
+                  src="/public/shots/25b_app_consent.webp"
+                  alt="An app asking for access to a Solid pod, showing the account, the access level and the folder it may reach"
+                  width="640" height="1387" loading="lazy" decoding="async"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <div class="feature feature-reverse">
+            <div class="feature-text reveal">
+              <span class="feature-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z" /><path d="M12 6v12" /></svg>
               </span>
               <h3>Wallet</h3>
@@ -314,7 +392,7 @@
             </div>
           </div>
 
-          <div class="feature feature-reverse">
+          <div class="feature">
             <div class="feature-text reveal">
               <span class="feature-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" /><circle cx="12" cy="10" r="2.5" /><path d="M8 17c.8-2 2.3-3 4-3s3.2 1 4 3" /></svg>
@@ -394,18 +472,6 @@
 
             <article class="card reveal">
               <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><path d="M14 17.5h7" /><path d="M17.5 14v7" /></svg>
-              </span>
-              <h3>Other apps, your rules</h3>
-              <p>
-                Other Solid apps reach your pod through Solid Share, so no other app ever
-                holds your password. You choose what each one may do and where, and the Apps
-                tab narrows or removes it at any time.
-              </p>
-            </article>
-
-            <article class="card reveal">
-              <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z" /><path d="M5.5 6.5a16 16 0 0 0 13 0" /><path d="M5.5 17.5a16 16 0 0 1 13 0" /></svg>
               </span>
               <h3>In your language</h3>
@@ -424,6 +490,21 @@
                 Solid Protocol, Solid-OIDC, Web Access Control with an ACP fallback, and
                 vCard. Your data stays readable by any other Solid client.
               </p>
+            </article>
+
+            <article class="card reveal">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6" /><path d="M16 6l6 6-6 6" /><path d="M13.5 4l-3 16" /></svg>
+              </span>
+              <h3>Build on it</h3>
+              <p>
+                Write a Solid app for Android and let Solid Share hold the accounts and
+                the tokens. The Android Solid Services SDK gives your app the pod, the
+                consent screen and the access checks.
+              </p>
+              <a class="link-arrow" href="https://androidsolidservices.erfangholami.com" rel="noopener">
+                Read the SDK docs <span aria-hidden="true">→</span>
+              </a>
             </article>
           </div>
         </div>
@@ -527,7 +608,18 @@
                 credentials never leave this app. The first time one asks, Solid Share shows you
                 which account it wants, what it wants to do and where. Nothing reaches your pod
                 until you allow it, the Apps tab lists everything you have allowed, and removing
-                an app takes effect on its next call.
+                an app takes effect on its next call. If you write Solid apps yourself, the
+                <a href="https://androidsolidservices.erfangholami.com" rel="noopener">Android Solid
+                Services SDK</a> is how your app asks.
+              </p>
+            </details>
+
+            <details>
+              <summary>Which languages does the app speak?<span class="faq-x" aria-hidden="true"></span></summary>
+              <p>
+                English, German, Spanish, French and Italian, on every screen. The app starts in
+                your phone's language when it is one of the five, and in English otherwise. A
+                Language row on your Profile changes it at any time, for Solid Share alone.
               </p>
             </details>
 
@@ -661,6 +753,10 @@
         "applicationCategory": "UtilitiesApplication",
         "url": "https://solidshare.app/",
         "downloadUrl": "https://f-droid.org/packages/com.erfangholami.solidshare/",
+        "softwareVersion": "0.5.0",
+        "datePublished": "2026-09-18",
+        "releaseNotes": "https://github.com/erfangholami/SolidShare/releases/tag/v0.5.0",
+        "inLanguage": ["en", "de", "es", "fr", "it"],
         "license": "https://opensource.org/licenses/MIT",
         "description": "Solid Share turns your Solid pod into a personal data wallet on Android. Browse files, keep contacts, tickets and passes, and share them by WebID, link or QR code.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
@@ -702,6 +798,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The features are identical. The F-Droid and GitHub build contains no analytics code at all. The Google Play build adds Firebase crash reporting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can other apps on my phone use my pod?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, and only as far as you let them. A Solid app built on the Android Solid Services SDK asks Solid Share instead of asking you for a password, so your credentials never leave this app. Nothing reaches your pod until you allow it, and the Apps tab lists everything you have allowed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which languages does the app speak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "English, German, Spanish, French and Italian, on every screen. The app starts in your phone's language when it is one of the five, and in English otherwise, and a Language row on your Profile changes it at any time."
             }
           },
           {
