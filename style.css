@@ -296,7 +296,7 @@ ol {
   margin-left: 0;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 920px) {
   .header-inner .btn {
     margin-left: auto;
   }
@@ -1254,7 +1254,7 @@ h3 {
   display: block;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 920px) {
   .menu-toggle {
     display: inline-flex;
   }

@@ -33,6 +33,11 @@ JavaScript off.
 The generated pages carry a banner saying so. The script fails rather than publish a page
 with a missing string, so a new key must be added to all five files.
 
+It also stamps `/style.css` and `/main.js` with a fingerprint of their own contents
+(`/style.css?v=b3b150c0`). Cloudflare serves those files with a four-hour cache, so without
+the stamp a reader who visited this morning would get today's markup wearing yesterday's
+styles. The stamp changes whenever the file does, which retires the old copy at once.
+
 ## To change a sentence
 
 1. Edit the English text in `i18n/home.en.json` (or `privacy.en.json`), keeping the key.

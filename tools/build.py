@@ -11,6 +11,7 @@ language is a real page with a real address.
 Edit a template or a string file, then run this. Never edit the generated pages.
 """
 
+import hashlib
 import io
 import json
 import os
@@ -123,6 +124,21 @@ def put_attributes(html, strings, missing):
     return TAG.sub(one, html)
 
 
+def stamp(html):
+    """Point at /style.css?v=<fingerprint>, so an update is never held back by a cache.
+
+    Cloudflare serves these files with a four-hour cache. Without the fingerprint a
+    reader who visited this morning gets today's markup wearing yesterday's styles.
+    """
+    for path, attr in (("/style.css", "href"), ("/main.js", "src")):
+        target = os.path.join(ROOT, path.lstrip("/"))
+        if not os.path.exists(target):
+            continue
+        digest = hashlib.sha256(io.open(target, "rb").read()).hexdigest()[:8]
+        html = html.replace('%s="%s"' % (attr, path), '%s="%s?v=%s"' % (attr, path, digest))
+    return html
+
+
 def picker(page, lang, label):
     """A plain list of links: the same page, in the other languages."""
     rows = []
@@ -215,6 +231,8 @@ def build_page(page, lang):
             '"description": "Solid Share turns your Solid pod into a personal data wallet on Android. Browse files, keep contacts, tickets and passes, and share them by WebID, link or QR code."',
             '"description": %s' % json.dumps(strings["meta.description"], ensure_ascii=False),
         )
+
+    html = stamp(html)
 
     # The keys did their work; the published page does not need them.
     html = re.sub(r' data-i18n(?:-alt|-label|-content)?="[^"]*"', "", html)
