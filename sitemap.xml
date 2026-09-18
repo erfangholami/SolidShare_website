@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:x="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://solidshare.app/</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/de/</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/es/</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/fr/</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/it/</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/privacy</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/privacy"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/privacy"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/privacy"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/privacy"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/privacy"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/de/privacy</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/privacy"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/privacy"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/privacy"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/privacy"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/privacy"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/es/privacy</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/privacy"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/privacy"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/privacy"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/privacy"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/privacy"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/fr/privacy</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/privacy"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/privacy"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/privacy"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/privacy"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/privacy"/>
+  </url>
+  <url>
+    <loc>https://solidshare.app/it/privacy</loc>
+    <x:link rel="alternate" hreflang="en" href="https://solidshare.app/privacy"/>
+    <x:link rel="alternate" hreflang="de" href="https://solidshare.app/de/privacy"/>
+    <x:link rel="alternate" hreflang="es" href="https://solidshare.app/es/privacy"/>
+    <x:link rel="alternate" hreflang="fr" href="https://solidshare.app/fr/privacy"/>
+    <x:link rel="alternate" hreflang="it" href="https://solidshare.app/it/privacy"/>
+  </url>
+</urlset>
